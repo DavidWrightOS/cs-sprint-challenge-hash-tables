@@ -1,17 +1,10 @@
 def intersection(arrays):
-    result = []
+    list_count = len(arrays)
     elem_count = {}
-
     for array in arrays:
         for elem in array:
             elem_count[elem] = elem_count[elem] + 1 if elem in elem_count else 1
-
-    list_count = len(arrays)
-    for (elem, count) in elem_count.items():
-        if count == list_count:
-            result.append(elem)
-    
-    return result
+    return [elem for elem in elem_count.keys() if elem_count[elem] == list_count]    
 
 
 if __name__ == "__main__":
