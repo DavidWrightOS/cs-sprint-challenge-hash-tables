@@ -1,9 +1,16 @@
 def intersection(arrays):
-    """
-    YOUR CODE HERE
-    """
-    # Your code here
+    result = []
+    elem_count = {}
 
+    for array in arrays:
+        for elem in array:
+            elem_count[elem] = elem_count[elem] + 1 if elem in elem_count else 1
+
+    list_count = len(arrays)
+    for (elem, count) in elem_count.items():
+        if count == list_count:
+            result.append(elem)
+    
     return result
 
 
