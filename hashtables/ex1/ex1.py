@@ -8,11 +8,3 @@ def get_indices_of_item_weights(weights, length, limit):
     
     return None
 
-# limit = 21
-# weights = [ 4, 6, 10, 15, 16]
-# length = 5
-# expected_output = (3, 1)
-
-# output = get_indices_of_item_weights(weights, length, limit)
-
-# print(f"expected output: {expected_output}, output: {output}")
